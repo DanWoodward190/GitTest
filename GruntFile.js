@@ -74,42 +74,6 @@ module.exports = function( grunt )
                     buildOnly:  false,
                 }
             },
-            build_android:
-            {
-                options:
-                {
-                    command:    "build",
-                    projectDir: ".",
-                    platform:   "android",
-                    buildOnly:  true
-                }
-            },
-            android_apk:
-            {
-                options:
-                {
-                    command:    "build",
-                    projectDir: ".",
-                    platform:   "android",
-                    target:     "dist-playstore",
-                    buildOnly:  true,
-                    keystore:   "android.keystore",
-                    alias:      "your-app-alias",
-                    password:   process.env.KEYSTORE_PASS,
-                    outputDir:  "./dist/artifacts"
-                }
-            },
-            dev_android:
-            {
-                options:
-                {
-                    command:    "build",
-                    args:       "--shadow",
-                    projectDir: ".",
-                    platform:   "android",
-                    buildOnly:  false
-                }
-            },
             clean:
             {
                 options:
@@ -130,10 +94,8 @@ module.exports = function( grunt )
 
     // Default task(s)
     //
-    grunt.registerTask( "default",      [ "titanium:ios_adhoc", "titaniun:android_apk" ] );
+    grunt.registerTask( "default",      [ "titanium:ios_adhoc"] );
     grunt.registerTask( "coverage",     [] );
     grunt.registerTask( "ios-adhoc",    [ "titanium:ios_adhoc"      ] );
     grunt.registerTask( "ios",          [ "titanium:dev_ios"        ] );
-    grunt.registerTask( "android",      [ "titanium:dev_android"    ] );
-    grunt.registerTask( "android-apk",  [ "titanium:android_apk"    ] );
 };
