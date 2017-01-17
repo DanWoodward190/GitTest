@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>com.virginmoney.gitTest</id>
-    <name>Git Test</name>
+    <name>GitTest</name>
     <version>1.0</version>
     <publisher>os9200037</publisher>
     <url/>

@@ -25,7 +25,7 @@ module.exports = function( grunt )
             }
         },
 
-        titanium:
+        appc_cli:
         {
             build_ios:
             {
@@ -87,15 +87,15 @@ module.exports = function( grunt )
 
     // Load the required plug-ins
     //
-    grunt.loadNpmTasks( "grunt-titanium"        );
+    grunt.loadNpmTasks('grunt-appc-cli');
     grunt.loadNpmTasks( "grunt-alloy"           );
     grunt.loadNpmTasks( "grunt-contrib-clean"   );
     grunt.loadNpmTasks( "grunt-shell"           );
 
     // Default task(s)
     //
-    grunt.registerTask( "default",      [ "titanium:ios_adhoc"] );
+    grunt.registerTask( "default",      [ "appc_cli:ios_adhoc"] );
     grunt.registerTask( "coverage",     [] );
-    grunt.registerTask( "ios-adhoc",    [ "titanium:ios_adhoc"      ] );
-    grunt.registerTask( "ios",          [ "titanium:dev_ios"        ] );
+    grunt.registerTask( "ios-adhoc",    [ "appc_cli:ios_adhoc"      ] );
+    grunt.registerTask( "ios",          [ "appc_cli:dev_ios"        ] );
 };
