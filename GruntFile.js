@@ -27,20 +27,12 @@ module.exports = function( grunt )
 
         appc_cli:
         {
-            build_ios:
-            {
-                options:
-                {
-                    command:    "build",
-                    projectDir: ".",
-                    platform:   "ios",
-                    buildOnly:  true,
-                }
-            },
+            options:{},
             ios_adhoc: {
                 options:
                 {
-                    command:    "build",
+                	command:"ti",
+                    subcommand:"build",
                     projectDir: ".",
                     platform:   "ios",
                     target:     "dist-adhoc",
