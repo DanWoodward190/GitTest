@@ -1,0 +1,33 @@
+{
+  "name": "GitTest",
+  "version": "1.0.0",
+  "description": "Welcome to your Appcelerator Titanium Mobile Project",
+  "main": "index.js",
+  "dependencies": {
+    "grunt": "^0.4.5",
+    "grunt-alloy": "^0.1.0",
+    "grunt-titanium": "^0.2.2"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-alloy": "^0.1.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-shell": "^1.1.1",
+    "grunt-titanium": "^0.2.2"
+  },
+  "scripts": {
+    "test": "command -v grunt >/dev/null 2>&1 && grunt coverage || { echo >&2 'Grunt is not installed'; }",
+    "prepublish": "command -v grunt >/dev/null 2>&1 && grunt || { echo >&2 'Grunt is not installed'; }"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanWoodward190/GitTest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanWoodward190/GitTest/issues"
+  },
+  "homepage": "https://github.com/DanWoodward190/GitTest#readme"
+}
