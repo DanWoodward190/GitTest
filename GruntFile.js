@@ -24,7 +24,7 @@ module.exports = function( grunt )
         },
         'appc-cli':
         {
-			dist-prod: 
+			'dist-prod': 
 			{
 	            'command': "run",
 	            'args': [ 
