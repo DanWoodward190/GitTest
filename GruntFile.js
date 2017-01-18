@@ -5,13 +5,11 @@ module.exports = function( grunt )
     grunt.initConfig(
     {
         pkg: grunt.file.readJSON( "package.json" ),
-
         settings:
         {
             ppUuid:             "15717f03-7b6b-4885-ae42-07493750acc4",
             distributionName:   "iPhone Developer: Jenkins Bot (LLKM4W48ZV)"
         },
-
         clean:
         {
             dist:
@@ -24,8 +22,10 @@ module.exports = function( grunt )
                 src: [ "dist/coverage" ]
             }
         },
-        appc-cli:{
-			dist-prod: {
+        appc-cli:
+        {
+			dist-prod: 
+			{
 	            'command': "run",
 	            'args': [ 
 	                '-p', 'ios',
@@ -56,7 +56,7 @@ module.exports = function( grunt )
 
     // Default task(s)
     //
-    grunt.registerTask( "default",      [ "appc-cli:dist-prod","appc-cli:clean"] );
+    grunt.registerTask( "default",      [ "appc-cli:dist-prod"] );
     grunt.registerTask( "coverage",     [] );
     grunt.registerTask( "ios-adhoc",    [ "appc-cli:ios_adhoc"      ] );
     grunt.registerTask( "ios",          [ "appc-cli:dev_ios"        ] );
