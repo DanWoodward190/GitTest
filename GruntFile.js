@@ -24,24 +24,26 @@ module.exports = function( grunt )
                 src: [ "dist/coverage" ]
             }
         },
-		'dist-prod': {
-            'command': "run",
-            'args': [ 
-                '-p', 'ios',
-                '-T', 'dist-adhoc',
-                '-R', '<%= settings.distributionName %>',
-                '-P', '<%= settings.ppUuid %>',
-                '-O', './dist/prod/',
-                '--log-level', 'trace'
-            ]
-        },
-     	clean:
-        {
-            options:
-            {
-                command:    "clean",
-                projectDir: "."
-            }
+        appc-cli:{
+			dist-prod: {
+	            'command': "run",
+	            'args': [ 
+	                '-p', 'ios',
+	                '-T', 'dist-adhoc',
+	                '-R', '<%= settings.distributionName %>',
+	                '-P', '<%= settings.ppUuid %>',
+	                '-O', './dist/prod/',
+	                '--log-level', 'trace'
+	            ]
+	        },
+	     	clean:
+	        {
+	            options:
+	            {
+	                command:    "clean",
+	                projectDir: "."
+	            }
+	        }
         }
     } );
 
@@ -54,7 +56,7 @@ module.exports = function( grunt )
 
     // Default task(s)
     //
-    grunt.registerTask( "default",      [ "dist-prod","clean"] );
+    grunt.registerTask( "default",      [ "appc-cli:dist-prod","appc-cli:clean"] );
     grunt.registerTask( "coverage",     [] );
     grunt.registerTask( "ios-adhoc",    [ "appc-cli:ios_adhoc"      ] );
     grunt.registerTask( "ios",          [ "appc-cli:dev_ios"        ] );
