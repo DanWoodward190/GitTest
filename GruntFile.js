@@ -22,7 +22,7 @@ module.exports = function( grunt )
                 src: [ "dist/coverage" ]
             }
         },
-        appc-cli:
+        'appc-cli':
         {
 			dist-prod: 
 			{
