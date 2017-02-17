@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ti:app xmlns:ti="http://ti.appcelerator.org">
     <id>com.virginmoney.gitTest</id>
-    <name>Git Test</name>
+    <name>GitTest</name>
     <version>1.0</version>
     <publisher>os9200037</publisher>
     <url/>
@@ -57,7 +57,7 @@
         <target device="iphone">true</target>
         <target device="mobileweb">false</target>
     </deployment-targets>
-    <sdk-version>6.0.0.GA</sdk-version>
+    <sdk-version>6.0.1.GA</sdk-version>
     <plugins>
         <plugin version="1.0">ti.alloy</plugin>
     </plugins>

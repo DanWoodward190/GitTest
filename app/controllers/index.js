@@ -4,5 +4,5 @@ function doClick(e) {
 
 $.index.open();
 
-//Adding comment on dev branch
-//Will commit to dev, then submit pull request to master
+//Making a change to push to git
+//This should be picked up by the Jenkins polling
